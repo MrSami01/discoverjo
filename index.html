@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Discover Jordan | اكتشف الأردن</title>
+<meta name="description" content="A bilingual student tourism guide to Jordan: destinations, trip planner and map.">
+<meta property="og:title" content="Discover Jordan | اكتشف الأردن"><meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500&display=swap">
+<style>
+:root{--bg:#f3ece0;--sf:#fbf7ef;--tx:#2b2925;--mu:#6d665a;--ac:#a94f2b;--ol:#5f6540;--ln:#d9cdb8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1f1d1a;--sf:#292622;--tx:#efe7d8;--mu:#a69d8c;--ac:#d9825a;--ol:#a3aa77;--ln:#3d382f}}
+*{box-sizing:border-box}html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,sans-serif}
+[dir=rtl] body,[dir=rtl] button,[dir=rtl] input,[dir=rtl] select{font-family:Tajawal,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em}
+[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3{font-family:Tajawal,serif;font-weight:700}
+a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--ln);display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding:10px 20px}
+header .logo{font:600 1.2rem Fraunces,serif;text-decoration:none;margin-inline-end:auto}
+nav{display:flex;flex-wrap:wrap;gap:4px 16px}nav a{text-decoration:none;color:var(--mu);padding:4px 0;border-bottom:2px solid transparent}nav a.on{color:var(--tx);border-color:var(--ac)}
+.btn{display:inline-block;background:var(--ac);color:#fff;border:0;padding:10px 20px;border-radius:2px;cursor:pointer;text-decoration:none;font-size:1rem}
+.btn.o{background:none;color:var(--tx);border:1px solid var(--tx)}.btn.s{padding:5px 12px;font-size:.9rem}
+.wrap{max-width:1080px;margin:auto;padding:28px 20px}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero>svg{position:absolute;inset:0;width:100%;height:100%}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(20,15,10,.75))}
+.hero .in{position:relative;z-index:1;max-width:1080px;margin:auto;padding:40px 20px;width:100%}
+.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);max-width:14em}
+.sb{display:flex;gap:8px;max-width:520px;margin:16px 0}.sb input{flex:1}
+input,select{padding:10px 12px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);border-radius:2px;font-size:1rem;min-width:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{position:relative;background:var(--sf);border:1px solid var(--ln)}.card svg{display:block;width:100%;aspect-ratio:4/3;height:auto}
+.card .b{padding:12px 16px 16px}.card h3{font-size:1.25rem;margin-bottom:.2em}.card h3 a{text-decoration:none}.card p{margin:.3em 0;color:var(--mu);font-size:.95rem}
+.fav{position:absolute;top:8px;inset-inline-end:8px;background:var(--sf);border:1px solid var(--ln);border-radius:2px;padding:4px 10px;cursor:pointer;color:var(--tx)}.fav[aria-pressed=true]{background:var(--ac);color:#fff}
+.tag{color:var(--ol);font-size:.85rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.chip{border:1px solid var(--ln);background:var(--sf);color:var(--tx);padding:6px 14px;border-radius:20px;cursor:pointer;font-size:.95rem}.chip[aria-pressed=true]{background:var(--ol);color:#fff;border-color:var(--ol)}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.row label{display:flex;flex-direction:column;gap:4px;font-size:.9rem;color:var(--mu)}
+.note{border-inline-start:3px solid var(--ac);padding:6px 14px;color:var(--mu);font-size:.92rem;margin:14px 0;background:var(--sf)}
+.gal{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin:18px 0}.gal svg{width:100%;height:100%;display:block;min-height:140px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:18px 0}.facts div{border-top:2px solid var(--ol);padding-top:6px}
+.day{border-top:1px solid var(--ln);padding:14px 0}.it{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;background:var(--sf);border:1px solid var(--ln);padding:12px 16px;margin:10px 0}
+.crumb{font-size:.9rem;color:var(--mu)}.crumb a{color:var(--mu)}
+.map{width:100%;max-width:420px;display:block;margin:auto;background:var(--sf);border:1px solid var(--ln)}.map a text{fill:var(--tx);font-size:10px}.map circle{fill:var(--ac)}
+footer{border-top:1px solid var(--ln);padding:24px 20px;color:var(--mu);font-size:.88rem;text-align:center}
+@media(max-width:640px){.gal{grid-template-columns:1fr}}
+@media print{header,footer,.np{display:none!important}}
+@media(prefers-reduced-motion:no-preference){.hero svg{animation:z 1.6s ease-out}@keyframes z{from{transform:scale(1.06)}}}
+</style></head><body>
+<header><a class="logo" href="#home">Discover Jordan · اكتشف الأردن</a><nav id="nav" aria-label="Main"></nav><button class="btn o s" id="lg" aria-label="Language">عربي</button></header>
+<main id="app" tabindex="-1"></main>
+<footer id="ft"></footer>
+<script>
+const T={home:["Home","الرئيسية"],dests:["Destinations","الوجهات"],planner:["Trip planner","مخطط الرحلة"],map:["Map","الخريطة"],saved:["Saved","المفضلة"],
+h1:["Jordan Is a Story Worth Experiencing","الأردن حكاية تستحق أن تعيشها"],sub:["Twelve places, from rose-red Petra to the Red Sea.","اثنا عشر مكانًا، من البتراء الوردية إلى البحر الأحمر."],
+sch:["Search destinations or experiences","ابحث عن وجهة أو تجربة"],go:["Search","بحث"],feat:["Featured destinations","وجهات مميزة"],int:["Explore by interest","استكشف حسب الاهتمام"],
+cta:["Plan your trip","خطط رحلتك"],all:["All","الكل"],sort:["Sort","ترتيب"],az:["Name A–Z","الاسم"],dur:["Visit length","مدة الزيارة"],
+none:["No destinations match. Clear the search or choose another filter.","لا توجد وجهات مطابقة. امسح البحث أو اختر تصنيفًا آخر."],
+history:["Historical sites","مواقع تاريخية"],nature:["Nature","طبيعة"],adventure:["Adventure","مغامرة"],beach:["Beaches","شواطئ"],culture:["Culture","ثقافة"],relax:["Relaxation","استجمام"],
+north:["North","الشمال"],central:["Central","الوسط"],south:["South","الجنوب"],jv:["Jordan Valley","الغور"],
+save:["Save","حفظ"],unsave:["Saved ✓","محفوظ ✓"],ov:["Overview","نظرة عامة"],dd:["Suggested time","المدة المقترحة"],bs:["Best season","أفضل موسم"],tip:["Practical tip","نصيحة عملية"],near:["Nearby","قريب من هنا"],
+hrs:["h","ساعة"],sa:["Spring and autumn","الربيع والخريف"],wsp:["Winter to spring","الشتاء إلى الربيع"],yr:["Year-round (summer is hot)","طوال العام (الصيف حار)"],
+days:["Days","عدد الأيام"],start:["Start from","نقطة البداية"],bud:["Budget (JOD)","الميزانية (دينار)"],ints:["Interests","الاهتمامات"],pace:["Pace","الوتيرة"],
+relaxed:["Relaxed","هادئة"],balanced:["Balanced","متوازنة"],packed:["Packed","مزدحمة"],grp:["Group","المجموعة"],solo:["Solo","فرد"],couple:["Couple","زوجان"],friends:["Friends","أصدقاء"],family:["Family","عائلة"],
+gen:["Generate itinerary","أنشئ البرنامج"],regen:["Regenerate","إعادة إنشاء"],copy:["Copy","نسخ"],copied:["Copied to clipboard","تم النسخ"],print:["Print","طباعة"],rm:["Remove","حذف"],
+day:["Day","اليوم"],drive:["≈ {h} h by road from previous stop (rough estimate)","≈ {h} ساعة بالسيارة من المحطة السابقة (تقدير تقريبي)"],long:["Long drive: consider an overnight stop.","مسافة طويلة: فكّر في المبيت."],
+pnote:["Generated locally in your browser from this site's own destination list (not an AI service). Costs are not estimated because no verified price data is included, and the budget is saved with the plan only. Verify transport, hours and prices with official sources.","تم الإنشاء محليًا في متصفحك من قائمة الوجهات في هذا الموقع (وليس خدمة ذكاء اصطناعي). لا نقدّر التكاليف لعدم وجود أسعار موثّقة، وتُحفظ الميزانية مع الخطة فقط. تحقق من المواصلات والمواعيد والأسعار من مصادر رسمية."],
+mnote:["Schematic map (not to scale, no live routing or traffic). Tap a marker to open the destination.","خريطة تخطيطية (غير مقيسة، دون مسارات أو حركة مرور مباشرة). اضغط على علامة لفتح الوجهة."],
+fnote:["Saved items and plans stay in this browser on this device only. There are no accounts.","تبقى العناصر والخطط المحفوظة في هذا المتصفح وعلى هذا الجهاز فقط. لا توجد حسابات."],
+nof:["Nothing saved yet. Open a destination and press Save.","لا شيء محفوظ بعد. افتح وجهة واضغط حفظ."],
+nf:["Page not found","الصفحة غير موجودة"],back:["Back to destinations","العودة إلى الوجهات"],
+ill:["Artwork is generated illustration, not photography. Student project: verify opening hours, prices and transport with official sources.","الرسومات توضيحية مولّدة وليست صورًا فوتوغرافية. مشروع طلابي: تحقق من المواعيد والأسعار والمواصلات من مصادر رسمية."],
+nxt:["Not yet included: experiences, food, travel guide, journal, quiz, contact and About pages.","غير متوفر بعد: التجارب والمأكولات ودليل السفر والمدونة والاختبار والاتصال وصفحة عن المشروع."]};
+const D=[
+{id:"petra",n:["Petra","البتراء"],c:"history",r:"south",la:30.33,lo:35.44,h:20,t:6,s:"sa",d:["A city carved into rose-red sandstone by the Nabataeans, a UNESCO World Heritage Site since 1985. Walk the Siq gorge to reach the Treasury.","مدينة نحتها الأنباط في الصخر الرملي الوردي، وهي موقع تراث عالمي لليونسكو منذ 1985. اسلك السيق للوصول إلى الخزنة."],k:["Start early and wear sturdy shoes; the site involves a lot of walking.","ابدأ مبكرًا وارتدِ حذاءً متينًا؛ الموقع يتطلب مشيًا كثيرًا."]},
+{id:"wadi-rum",n:["Wadi Rum","وادي رم"],c:"adventure",r:"south",la:29.57,lo:35.42,h:25,t:8,s:"sa",d:["A desert valley of sandstone and granite cliffs, also on the UNESCO list. Jeep tours, camel treks and camping under dark skies.","وادٍ صحراوي تحيط به جبال الحجر الرملي والغرانيت، وهو أيضًا على قائمة اليونسكو. جولات جيب ورحلات جمال ومبيت تحت سماء صافية."],k:["Book a local Bedouin-run camp or guide and bring layers; nights get cold.","احجز مخيمًا أو مرشدًا محليًا من أهل المنطقة واحمل ملابس إضافية؛ الليالي باردة."]},
+{id:"dead-sea",n:["Dead Sea","البحر الميت"],c:"relax",r:"jv",la:31.5,lo:35.5,h:200,t:4,s:"wsp",d:["The lowest land elevation on Earth, famous for its salty water that lets you float and for its mineral-rich mud.","أخفض نقطة على اليابسة، معروف بمياهه شديدة الملوحة التي تتيح الطفو وبطينه الغني بالمعادن."],k:["Avoid shaving beforehand, keep water out of your eyes and rinse off after floating.","تجنب الحلاقة قبل السباحة، وأبعد الماء عن عينيك واغتسل بعد الطفو."]},
+{id:"aqaba",n:["Aqaba","العقبة"],c:"beach",r:"south",la:29.53,lo:35.0,h:188,t:8,s:"wsp",d:["Jordan's Red Sea port, known for coral reefs, snorkelling and diving, and a relaxed seaside town.","ميناء الأردن على البحر الأحمر، معروف بالشعاب المرجانية والغطس وبمدينة ساحلية هادئة."],k:["Use reef-safe habits: don't touch coral and choose licensed dive operators.","حافظ على الشعاب: لا تلمس المرجان واختر مراكز غوص مرخصة."]},
+{id:"jerash",n:["Jerash","جرش"],c:"history",r:"north",la:32.28,lo:35.89,h:42,t:3,s:"sa",d:["One of the best-preserved Roman provincial cities in the Near East, with colonnaded streets, temples and theatres.","من أفضل المدن الرومانية المحفوظة في الشرق الأدنى، بشوارعها المعمدة ومعابدها ومسارحها."],k:["Shade is limited; bring a hat and water.","الظل قليل؛ احمل قبعة وماء."]},
+{id:"amman",n:["Amman","عمّان"],c:"culture",r:"central",la:31.95,lo:35.93,h:35,t:8,s:"sa",d:["Jordan's hilly capital: the Citadel, the Roman Theatre, downtown souks and a growing café and art scene.","عاصمة الأردن المبنية على الجبال: القلعة والمدرج الروماني وأسواق وسط البلد ومشهد متنامٍ للمقاهي والفن."],k:["Downtown is best explored on foot; taxis are useful between hills.","وسط البلد يُستكشف مشيًا؛ وسيارات الأجرة مفيدة بين الجبال."]},
+{id:"ajloun",n:["Ajloun","عجلون"],c:"nature",r:"north",la:32.33,lo:35.73,h:110,t:3,s:"sa",d:["A forested highland area topped by Ajloun Castle, a 12th-century Ayyubid fortress, with walking trails nearby.","منطقة جبلية حرجية يعلوها قلعة عجلون، حصن أيوبي من القرن الثاني عشر، وبقربها مسارات للمشي."],k:["Pair it with Jerash for a northern day trip.","اجمعها مع جرش في رحلة ليوم واحد إلى الشمال."]},
+{id:"umm-qais",n:["Umm Qais","أم قيس"],c:"history",r:"north",la:32.65,lo:35.68,h:80,t:2,s:"sa",d:["Ancient Gadara, with Roman and Byzantine ruins and wide views toward the Sea of Galilee and the Golan Heights.","جدارا القديمة، فيها آثار رومانية وبيزنطية وإطلالات واسعة نحو بحيرة طبريا والجولان."],k:["Visit near sunset for the best light over the valley.","زرها قرب الغروب لأجمل إضاءة على الوادي."]},
+{id:"madaba",n:["Madaba","مادبا"],c:"culture",r:"central",la:31.72,lo:35.79,h:30,t:2,s:"sa",d:["The 'City of Mosaics', home to Byzantine floor mosaics, including the famous Map of the Holy Land in St George's Church.","«مدينة الفسيفساء»، فيها فسيفساء بيزنطية منها خارطة الأرض المقدسة الشهيرة في كنيسة القديس جاورجيوس."],k:["Dress modestly when entering churches.","ارتدِ ملابس محتشمة عند دخول الكنائس."]},
+{id:"mount-nebo",n:["Mount Nebo","جبل نبو"],c:"history",r:"central",la:31.77,lo:35.73,h:45,t:2,s:"sa",d:["A sacred hilltop where tradition holds Moses viewed the Promised Land, with a memorial church and sweeping views.","قمة مقدسة يُعتقد أن موسى عليه السلام أطلّ منها على الأرض الموعودة، وفيها كنيسة تذكارية وإطلالة واسعة."],k:["Views are clearest on dry, clear days; combine with Madaba.","تكون الرؤية أوضح في الأيام الصافية؛ اجمعها مع مادبا."]},
+{id:"dana",n:["Dana Biosphere Reserve","محمية ضانا للمحيط الحيوي"],c:"nature",r:"south",la:30.68,lo:35.61,h:25,t:6,s:"sa",d:["Jordan's largest nature reserve, with steep canyons, varied habitats and hiking routes above the village of Dana.","أكبر محمية طبيعية في الأردن، بوديان شديدة الانحدار وموائل متنوعة ومسارات مشي فوق قرية ضانا."],k:["Check trail conditions and guide requirements with the reserve before hiking.","تحقق من حالة المسارات وشروط المرشد مع المحمية قبل المشي."]},
+{id:"baptism-site",n:["Baptism Site","موقع المغطس"],c:"history",r:"jv",la:31.84,lo:35.55,h:100,t:2,s:"wsp",d:["Bethany Beyond the Jordan, a UNESCO site traditionally linked to the baptism of Jesus on the east bank of the Jordan River.","بيت عنيا عبر الأردن، موقع لليونسكو يرتبط تقليديًا بتعميد السيد المسيح على الضفة الشرقية لنهر الأردن."],k:["Visits are usually on guided shuttles; confirm times in advance.","تكون الزيارة عادةً ضمن جولات منظمة؛ أكّد المواعيد مسبقًا."]}];
+const CATS=["history","nature","adventure","beach","culture","relax"];
+let L=ls("lang")||"en",F=jp(ls("fav"),[]),P=jp(ls("plan"),null),S={q:"",c:"all",o:"az"};
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function jp(s,f){try{return s?JSON.parse(s):f}catch(e){return f}}
+const t=k=>T[k]?T[k][L=="en"?0:1]:k,nm=d=>d.n[L=="en"?0:1],ds=d=>d.d[L=="en"?0:1],$=s=>document.querySelector(s);
+const num=x=>L=="ar"?String(x).replace(/\d/g,c=>"٠١٢٣٤٥٦٧٨٩"[c]):x;
+function art(h,s,w=800,H=500){let a=s*9301+49297,r=()=>(a=(a*9301+49297)%233280)/233280,p="";
+for(let i=0;i<3;i++){let y=H*(.55+i*.14),d=`M0 ${H}L0 ${y}`;for(let x=0;x<=w;x+=80)d+=`L${x} ${(y-r()*95*(1-i*.25)).toFixed(0)}`;p+=`<path d="${d}L${w} ${H}Z" fill="hsl(${h+i*5} ${38-i*6}% ${40-i*9}%)"/>`}
+return `<svg viewBox="0 0 ${w} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g${s}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(${h} 50% 68%)"/><stop offset="1" stop-color="hsl(${h-18} 65% 87%)"/></linearGradient></defs><rect width="${w}" height="${H}" fill="url(#g${s})"/><circle cx="${w*.72}" cy="${H*.28}" r="44" fill="#fff" opacity=".75"/>${p}</svg>`}
+const km=(a,b)=>{const R=6371,r=Math.PI/180,x=(b.lo-a.lo)*r*Math.cos((a.la+b.la)/2*r),y=(b.la-a.la)*r;return R*Math.hypot(x,y)};
+const hrsBy=(a,b)=>Math.max(.2,Math.round(km(a,b)*1.4/70*10)/10);
+const byId=id=>D.find(d=>d.id==id);
+function favBtn(id){const on=F.includes(id);return `<button class="fav" data-a="fav" data-id="${id}" aria-pressed="${on}">${on?t("unsave"):t("save")}</button>`}
+function card(d,i){return `<article class="card"><a href="#${d.id}" tabindex="-1">${art(d.h,i+1)}</a><div class="b"><h3><a href="#${d.id}">${nm(d)}</a></h3><div class="tag">${t(d.c)} · ${t(d.r)}</div><p>${ds(d).split(/[.،]/)[0]}.</p></div>${favBtn(d.id)}</article>`}
+function seo(title,desc){document.title=title+" | Discover Jordan | اكتشف الأردن";let m=$('meta[name=description]');m.content=desc||t("sub")}
+function home(){seo(t("home"));$("#app").innerHTML=`<section class="hero">${art(20,7,1200,700)}<div class="in"><h1>${t("h1")}</h1><p>${t("sub")}</p><form class="sb" data-a="srch" role="search"><input id="hq" aria-label="${t("sch")}" placeholder="${t("sch")}"><button class="btn">${t("go")}</button></form><a class="btn" href="#planner">${t("cta")}</a></div></section>
+<div class="wrap"><h2>${t("feat")}</h2><div class="grid">${["petra","wadi-rum","jerash","aqaba"].map(i=>card(byId(i),D.indexOf(byId(i)))).join("")}</div>
+<h2 style="margin-top:2em">${t("int")}</h2><div class="chips">${CATS.map(c=>`<a class="chip" style="text-decoration:none" href="#destinations" data-a="cat" data-c="${c}">${t(c)}</a>`).join("")}</div></div>`}
+function list(){seo(t("dests"));$("#app").innerHTML=`<div class="wrap"><h1>${t("dests")}</h1><div class="row"><label>${t("go")}<input id="q" value="${S.q}" type="search"></label><label>${t("sort")}<select id="so"><option value="az">${t("az")}</option><option value="dur">${t("dur")}</option></select></label></div>
+<div class="chips" role="group">${["all",...CATS].map(c=>`<button class="chip" data-a="cat" data-c="${c}" aria-pressed="${S.c==c}">${t(c)}</button>`).join("")}</div><div id="gr" class="grid" aria-live="polite"></div></div>`;$("#so").value=S.o;fill()}
+function fill(){let q=S.q.trim().toLowerCase(),r=D.filter(d=>(S.c=="all"||d.c==S.c)&&(!q||(d.n.join(" ")+d.d.join(" ")).toLowerCase().includes(q)));
+r.sort((a,b)=>S.o=="dur"?b.t-a.t:nm(a).localeCompare(nm(b),L));$("#gr").innerHTML=r.length?r.map(d=>card(d,D.indexOf(d))).join(""):`<p>${t("none")}</p>`}
+function detail(d){const i=D.indexOf(d),nr=D.filter(x=>x!=d).sort((a,b)=>km(d,a)-km(d,b)).slice(0,3);seo(nm(d),ds(d));
+$("#app").innerHTML=`<section class="hero" style="min-height:52vh">${art(d.h,i+1,1200,700)}<div class="in"><h1>${nm(d)}</h1><div>${t(d.c)} · ${t(d.r)}</div></div></section><div class="wrap"><p class="crumb"><a href="#home">${t("home")}</a> / <a href="#destinations">${t("dests")}</a> / ${nm(d)}</p>
+<div class="gal">${art(d.h,i+101)}<div style="display:grid;gap:10px">${art(d.h+8,i+201,400,250)}${art(d.h-8,i+301,400,250)}</div></div><div class="row" style="justify-content:space-between"><h2>${t("ov")}</h2><div style="position:relative;min-height:40px">${favBtn(d.id).replace('class="fav"','class="fav" style="position:static"')}</div></div><p style="max-width:42em">${ds(d)}</p>
+<div class="facts"><div><b>${t("dd")}</b><br>≈ ${num(d.t)} ${t("hrs")}</div><div><b>${t("bs")}</b><br>${t(d.s)}</div><div><b>${t("tip")}</b><br>${d.k[L=="en"?0:1]}</div></div>
+<h3>${t("near")}</h3><div class="grid">${nr.map(x=>card(x,D.indexOf(x))).join("")}</div><p><a href="#destinations">${t("back")}</a></p></div>`}
+function planner(){seo(t("planner"));const p=P||{days:3,start:"amman",bud:300,pace:"balanced",grp:"couple",ints:[]};
+$("#app").innerHTML=`<div class="wrap"><h1>${t("planner")}</h1><form class="row np" id="pf"><label>${t("days")}<input id="pd" type="number" min="1" max="7" value="${p.days}"></label><label>${t("start")}<select id="ps">${D.map(d=>`<option value="${d.id}">${nm(d)}</option>`).join("")}</select></label><label>${t("bud")}<input id="pb" type="number" min="0" value="${p.bud}"></label>
+<label>${t("pace")}<select id="pp">${["relaxed","balanced","packed"].map(x=>`<option value="${x}">${t(x)}</option>`).join("")}</select></label><label>${t("grp")}<select id="pg">${["solo","couple","friends","family"].map(x=>`<option value="${x}">${t(x)}</option>`).join("")}</select></label></form>
+<p class="np"><b>${t("ints")}</b></p><div class="chips np">${CATS.map(c=>`<button type="button" class="chip" data-a="pi" data-c="${c}" aria-pressed="${p.ints.includes(c)}">${t(c)}</button>`).join("")}</div>
+<button class="btn np" data-a="gen">${t(P?"regen":"gen")}</button><div class="note">${t("pnote")}</div><div id="it"></div></div>`;
+$("#ps").value=p.start;$("#pp").value=p.pace;$("#pg").value=p.grp;itin()}
+function gen(){const g=i=>$(i).value,per={relaxed:1,balanced:2,packed:3}[g("#pp")],days=Math.min(7,Math.max(1,+g("#pd")||1)),ints=[...document.querySelectorAll('[data-a=pi][aria-pressed=true]')].map(b=>b.dataset.c);
+let pool=D.map(d=>({d,s:(ints.includes(d.c)?2:0)+Math.random()*1.5})).sort((a,b)=>b.s-a.s).slice(0,Math.min(12,days*per)).map(x=>x.d),cur=byId(g("#ps")),o=[];
+while(pool.length){pool.sort((a,b)=>km(cur,a)-km(cur,b));cur=pool.shift();o.push(cur.id)}
+P={days,per,start:g("#ps"),bud:+g("#pb")||0,pace:g("#pp"),grp:g("#pg"),ints,items:o};ls("plan",JSON.stringify(P));planner()}
+function itin(){const el=$("#it");if(!P){el.innerHTML="";return}let h="",prev=byId(P.start);
+P.items.forEach((id,i)=>{const d=byId(id);if(i%P.per==0)h+=`<div class="day"><h2>${t("day")} ${num(i/P.per+1)}</h2></div>`;const tt=hrsBy(prev,d);prev=d;
+h+=`<div class="it"><div style="flex:1 1 260px"><h3><a href="#${d.id}">${nm(d)}</a></h3><p style="margin:.2em 0">${ds(d)}</p><p class="tag">${t("dd")}: ≈ ${num(d.t)} ${t("hrs")} · ${t("drive").replace("{h}",num(tt))} ${tt>2.5?t("long"):""}</p><p class="tag">${d.k[L=="en"?0:1]}</p></div><div class="np"><button class="btn o s" data-a="mv" data-i="${i}" data-d="-1" aria-label="↑">↑</button> <button class="btn o s" data-a="mv" data-i="${i}" data-d="1" aria-label="↓">↓</button> <button class="btn o s" data-a="del" data-i="${i}">${t("rm")}</button></div></div>`});
+el.innerHTML=h+`<div class="np"><button class="btn o" data-a="cp">${t("copy")}</button> <button class="btn o" data-a="pr">${t("print")}</button> <span id="cm" role="status"></span></div>`}
+function mapv(){seo(t("map"));const X=d=>20+(d.lo-34.9)/1.1*260,Y=d=>20+(32.8-d.la)/3.4*480;
+$("#app").innerHTML=`<div class="wrap"><h1>${t("map")}</h1><svg class="map" viewBox="0 0 300 520" role="group" aria-label="${t("map")}">${D.map(d=>`<a href="#${d.id}"><circle cx="${X(d)}" cy="${Y(d)}" r="6"/><text x="${X(d)+9}" y="${Y(d)+3}">${nm(d).split(" ")[0]}</text></a>`).join("")}</svg><div class="note">${t("mnote")}</div><h2>${t("dests")}</h2><ul>${D.map(d=>`<li><a href="#${d.id}">${nm(d)}</a> · ${t(d.r)}</li>`).join("")}</ul></div>`}
+function favs(){seo(t("saved"));const r=D.filter(d=>F.includes(d.id));$("#app").innerHTML=`<div class="wrap"><h1>${t("saved")}</h1><div class="note">${t("fnote")}</div>${r.length?`<div class="grid">${r.map(d=>card(d,D.indexOf(d))).join("")}</div>`:`<p>${t("nof")}</p>`}</div>`}
+function route(){const k=location.hash.slice(1)||"home",d=byId(k);
+$("#nav").innerHTML=[["home","home"],["destinations","dests"],["planner","planner"],["map","map"],["saved","saved"]].map(([h,l])=>`<a href="#${h}" class="${k==h?"on":""}">${t(l)}</a>`).join("");
+$("#ft").innerHTML=`<p>${t("ill")}</p><p>${t("nxt")}</p>`;$("#lg").textContent=L=="en"?"عربي":"English";
+document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";
+if(d)detail(d);else({home,destinations:list,planner,map:mapv,saved:favs}[k]||(()=>{seo(t("nf"));$("#app").innerHTML=`<div class="wrap"><h1>404</h1><p>${t("nf")}</p><a class="btn" href="#home">${t("home")}</a></div>`}))();
+if(!window._f)scrollTo(0,0)}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a;
+if(a=="fav"){const i=F.indexOf(b.dataset.id);i<0?F.push(b.dataset.id):F.splice(i,1);ls("fav",JSON.stringify(F));window._f=1;route();window._f=0}
+else if(a=="cat"){S.c=b.dataset.c;if(location.hash=="#destinations")list()}
+else if(a=="pi")b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!="true");
+else if(a=="gen")gen();
+else if(a=="mv"||a=="del"){const i=+b.dataset.i,it=P.items;if(a=="del")it.splice(i,1);else{const j=i+ +b.dataset.d;if(j<0||j>=it.length)return;[it[i],it[j]]=[it[j],it[i]]}ls("plan",JSON.stringify(P));itin()}
+else if(a=="pr")print();
+else if(a=="cp"){let s="",prev=byId(P.start);P.items.forEach((id,i)=>{if(i%P.per==0)s+=`\n${t("day")} ${i/P.per+1}\n`;const d=byId(id);s+=`- ${nm(d)} (≈ ${d.t} ${t("hrs")}, ≈ ${hrsBy(prev,d)} ${t("hrs")})\n`;prev=d});
+(navigator.clipboard?navigator.clipboard.writeText(s):Promise.reject()).then(()=>$("#cm").textContent=t("copied")).catch(()=>{$("#cm").textContent=s})}});
+document.addEventListener("submit",e=>{e.preventDefault();if(e.target.dataset.a=="srch"){S.q=$("#hq").value;S.c="all";location.hash="destinations"}});
+document.addEventListener("input",e=>{if(e.target.id=="q"){S.q=e.target.value;fill()}});
+document.addEventListener("change",e=>{if(e.target.id=="so"){S.o=e.target.value;fill()}});
+document.addEventListener("click",e=>{if(e.target.closest('[data-a=cat]')&&location.hash=="#destinations"){const b=document.querySelectorAll('[data-a=cat]');b.forEach(x=>x.setAttribute("aria-pressed",x.dataset.c==S.c));fill()}});
+$("#lg").onclick=()=>{L=L=="en"?"ar":"en";ls("lang",L);route()};
+addEventListener("hashchange",route);route();
+</script></body></html>
