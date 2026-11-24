@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Atharna compass mark">
+  <rect width="128" height="128" rx="30" fill="#a64f36"/>
+  <circle cx="64" cy="64" r="39" fill="none" stroke="#fbf7ef" stroke-width="4"/>
+  <path d="M64 31v9m0 48v9m33-33h-9m-48 0h-9" stroke="#fbf7ef" stroke-width="3" stroke-linecap="round"/>
+  <path d="m77 49-8 23-23 8 8-23 23-8Z" fill="#fbf7ef"/>
+  <circle cx="64" cy="64" r="4" fill="#a64f36"/>
+</svg>

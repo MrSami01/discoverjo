@@ -1,0 +1,23 @@
+{
+  "name": "أثرنا",
+  "short_name": "أثرنا",
+  "description": "اكتشف التراث الأردني وحكاياته",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#FBF6EF",
+  "theme_color": "#B5502E",
+  "lang": "ar",
+  "dir": "rtl",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "travel"],
+  "screenshots": []
+}
